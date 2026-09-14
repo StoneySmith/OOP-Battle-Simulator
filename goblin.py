@@ -15,6 +15,9 @@ class Goblin:
 
     def take_damage(self, damage):
         """Reduce health without allowing it to fall below zero."""
+        if damage < 5:
+            print(self.name + "Dodges!")
+            return
         self.health = max(0, self.health - damage)
         print(f"{self.name} takes {damage} damage. Health: {self.health}")
 
