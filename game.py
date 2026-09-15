@@ -17,10 +17,10 @@ def main():
     hero = Hero(heroName)
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     print(f"{goblin2.name} enters the arena with {goblin2.health} health.")
-
-    goblin.take_damage(hero.attack_power)
+    firstAttack = hero.attack()
+    goblin.take_damage(firstAttack)
     if goblin.is_alive():
-            hero.take_damage(goblin.attack_power)
+            hero.take_damage(goblin.attack())
     
 
 
