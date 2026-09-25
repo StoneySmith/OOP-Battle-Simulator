@@ -5,10 +5,11 @@ class Hero:
         self.health = 120
         self.attack_power = 20
         self.armor = 1
+        self.gold = 0
     def attack(self):
         return random.randint(1, self.attack_power)
     def take_damage(self, damage):
-        if damage < 5:
+        if damage < 2:
             print(self.name + " Dodges!")
             return 
         self.health = self.health - damage
